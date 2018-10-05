@@ -11,7 +11,7 @@ echo "$list" | head -n 1
 
 # Outputs bottom earner
 
-echo "The bottom earner had the following gender, years of experience, and wage:"
+echo -e "\nThe bottom earner had the following gender, years of experience, and wage:"
 echo "$list" | tail -n 1
 
 # Lists the number of females in the top 10 earners
@@ -19,7 +19,7 @@ f=$(echo "$list" | head -n 10 | grep "female" | wc -l)
 
 if [ $f -eq 1 ]
 then
-echo "There was $f female in the top 10 earners by wage."
+echo -e "\nThere was $f female in the top 10 earners by wage."
 else
-echo "There were $f females in the top 10 earners by wage."
+echo -e "\nThere were $f females in the top 10 earners by wage."
 fi
